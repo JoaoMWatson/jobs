@@ -4,7 +4,7 @@ import requests
 
 
 def getResume():
-	with open('resume.json') as f:
+	with open("../resume.json") as f:
 		resume = load(f)
 	return resume
 
@@ -20,6 +20,7 @@ def main():
 	except:
 		print("error")
 		print(response.status_code)
+		print(response.reason)
 	finally:
 		print(resume)
 		
